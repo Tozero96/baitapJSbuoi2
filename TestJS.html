@@ -34,7 +34,7 @@
             - hiển thị kết quả tiền lương nhân viên
 
     -->
-    <!-- TÍNH TIỀN LƯƠNG -->
+
     <div class="container">
         <h2>TÍNH LƯƠNG NHÂN VIÊN</h2>
         <form>
@@ -73,9 +73,8 @@
             - hiển thị kết quả lên UI    
         Khối 3: output
             - hiển thị kết quả giá trị trung bình
-
     -->
-    <!-- TÍNH GIÁ TRỊ TRUNG BÌNH -->
+
     <div class="container">
         <h2>TÍNH GIÁ TRỊ TRUNG BÌNH</h2>
         <form>
@@ -122,8 +121,8 @@
             - hiển thị kết quả lên UI    
         Khối 3: output
             - hiển thị kết quả số tiền quy đổi 
-
     -->
+    
 
     <div class="container">
         <h2>ĐỔI TIỀN</h2>
@@ -137,7 +136,26 @@
     </div>
 
 
-
+<!-- TÍNH DIỆN TÍCH, CHU VI HCN
+        Khối 1: input
+            - nhập vào chiều dài, chiều rộng             
+        Khối 2:
+        B1:
+            - khai báo biến và gán giá trị ban đầu
+                chieuDai (chiều dài)
+                chieuRong (chiều rộng)
+                chuVi (chu vi)
+                dienTich (diện tích)
+        B2:
+            - lấy giá trị nhập từ form                   
+            - lập công thức tính 
+                 chuVi = (chieuDai + chieuRong) *2
+                 dienTich = (chieuDai * chieuRong)
+            - gán hàm vào sự kiện click
+            - hiển thị kết quả lên UI    
+        Khối 3: output
+            - hiển thị kết quả tính chu vi, diện tích HCN
+    -->
     <div class="container">
         <h2>TÍNH DIỆN TÍCH, CHU VI HCN</h2>
         <form>
@@ -147,27 +165,42 @@
             <div class="form-group">
                 <input type="number" class="form-control" id="chieuRong" placeholder="Chiều rộng">
             </div>
-            <button type="button" id="btnTinhChuVi" class="btn btn-info">Tính nào</button>
+            <button type="button" id="btnTinhChuvi" class="btn btn-info">Chu vi HCN</button>
             <p id="chuVi" class="alert alert-info"></p>
-            <button type="button" id="btnTinhDienTich" class="btn btn-info">Tính nào</button>
+            <button type="button" id="btnTinhDientich" class="btn btn-info">Diện tích HCN</button>
             <p id="dienTich" class="alert alert-info"></p>
         </form>
     </div>
 
+<!-- TÍNH TỔNG 2 KÝ SỐ
+        Khối 1: input
+            - nhập vào số có 2 chữ số             
+        Khối 2:
+        B1:
+            - khai báo biến và gán giá trị ban đầu
+                so (số có 2 chữ số)
+                soChuc (số hàng chục) = so /10
+                soDV (số đơn vị) = so %10
+                tong (tổng 2 ký số)
+        B2:
+            - lấy giá trị nhập từ form                   
+            - lập công thức tính 
+                 tong = soChuc + soDV
+            - gán hàm vào sự kiện click
+            - hiển thị kết quả lên UI    
+        Khối 3: output
+            - hiển thị kết quả tính tổng 2 ký số 
 
+    -->
     <div class="container">
-        <h2>DEMO TÍNH ĐTB</h2>
+        <h2>TÍNH TỔNG 2 KÝ SỐ</h2>
         <form>
             <div class="form-group">
-                <input type="number" class="form-control" id="toan" placeholder="Toán">
-            </div>
-            <div class="form-group">
-
-                <input type="number" class="form-control" id="van" placeholder="Văn">
-            </div>
+                <input type="number" class="form-control" id="so" placeholder="Nhập vào số có 2 chữ số">
+            </div>   
 
             <button type="button" id="btnTinh" class="btn btn-info">Tính nào</button>
-            <p id="txtDiem" class="alert alert-info"></p>
+            <p id="tong" class="alert alert-info"></p>
         </form>
     </div>
 
