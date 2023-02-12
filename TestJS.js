@@ -34,8 +34,27 @@ document.getElementById("btndoiTien").onclick = doiTien;
 function tinhChuviHcn(){
     var dai = document.getElementById("chieuDai").value;
     var rong = document.getElementById("chieuRong").value;
-    var chuVi = (Number(dai))
+    var chuVi = ((Number(dai) + Number(rong))*2);
 
-    document.getElementById("doiTien").innerHTML = "Số tiền là: " + doiTien;
+    document.getElementById("chuVi").innerHTML = "Chu vi HCN: " + chuVi;
 }
-document.getElementById("btndoiTien").onclick = doiTien;
+document.getElementById("btnTinhChuvi").onclick = tinhChuviHcn;
+
+function tinhDientichHcn(){
+    var dai = document.getElementById("chieuDai").value;
+    var rong = document.getElementById("chieuRong").value;
+    var dienTich = (Number(dai) * Number(rong));
+
+    document.getElementById("dienTich").innerHTML = "Diện tích HCN: " + dienTich;
+}
+document.getElementById("btnTinhDientich").onclick = tinhDientichHcn;
+
+function tinhTong2Kyso(){
+    var so = document.getElementById("so").value;
+    var soChuc = parseInt (so / 10);
+    console.log(soChuc);
+    var soDV = so % 10;
+    var tong = (Number(soChuc) + Number(soDV));
+    document.getElementById("tong").innerHTML = "Tổng 2 ký số là: " + tong;
+}
+document.getElementById("btnTinh").onclick = tinhTong2Kyso;
