@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- TÍNH NGÀY LƯƠNG
+        Khối 1: input
+            - nhập vào tiền lương 1 ngày 
+            - nhập vào ngày lương 
+        Khối 2:
+        B1:
+            - khai báo biến và gán giá trị ban đầu
+                NgayLuong(tiền lương 1 ngày)
+                Ngay(số ngày lương)
+                luong(Tổng số lương nhận được)
+        B2:
+            - lấy giá trị nhập từ form                   
+            - lập công thức tính ngày lương
+                 luong=(ngayLuong*ngay)
+            - gán hàm vào sự kiện click
+            - hiển thị kết quả lên UI    
+        Khối 3: output
+            - hiển thị kết quả tiền lương nhân viên
+
+    -->
+    <!-- TÍNH TIỀN LƯƠNG -->
+    <div class="container">
+        <h2>TÍNH LƯƠNG NHÂN VIÊN</h2>
+        <form>
+            <div class="form-group">
+                <h4>Ngày lương</h4>
+                <input type="number" class="form-control" id="ngayLuong" placeholder="Lương 1 ngày">
+            </div>
+            <div class="form-group">
+                <h4>Ngày làm</h4>
+                <input type="number" class="form-control" id="ngay" placeholder="Số ngày làm">
+            </div>
+
+            <button type="button" id="btnTinhLuong" class="btn btn-info">Tổng lương</button>       
+            <p id="luong" class="alert alert-info"></p>
+        </form>
+    </div>
+
+
+    <!-- TÍNH GTTB
+        Khối 1: input
+            - nhập vào 5 số thực            
+        Khối 2:
+        B1:
+            - khai báo biến và gán giá trị ban đầu
+                so1(số thứ 1)
+                so2(số thứ 2)
+                so3(số thứ 3)
+                so4(số thứ 4)
+                so5(số thứ 5)
+                GTTB(Giá trị trung bình của 5 số thực)
+        B2:
+            - lấy giá trị nhập từ form                   
+            - lập công thức tính 
+                 GTTB=(so1+so2+so3+so4+so5)/5
+            - gán hàm vào sự kiện click
+            - hiển thị kết quả lên UI    
+        Khối 3: output
+            - hiển thị kết quả giá trị trung bình
+
+    -->
+    <!-- TÍNH GIÁ TRỊ TRUNG BÌNH -->
+    <div class="container">
+        <h2>TÍNH GIÁ TRỊ TRUNG BÌNH</h2>
+        <form>
+            <div class="form-group">
+                <h4>Số thứ 1</h4>
+                <input type="number" class="form-control" id="so1" placeholder="Số thứ 1">
+            </div>
+            <div class="form-group">
+                <h4>Số thứ 2</h4>
+                <input type="number" class="form-control" id="so2" placeholder="Số thứ 2">
+            </div>
+            <div class="form-group">
+                <h4>Số thứ 3</h4>
+                <input type="number" class="form-control" id="so3" placeholder="Số thứ 3">
+            </div>
+            <div class="form-group">
+                <h4>Số thứ 4</h4>
+                <input type="number" class="form-control" id="so4" placeholder="Số thứ 4">
+            </div>
+            <div class="form-group">
+                <h4>Số thứ 5</h4>
+                <input type="number" class="form-control" id="so5" placeholder="Số thứ 5">
+            </div>
+
+            <button type="button" id="btnTinhGTTB" class="btn btn-info">Tính nào</button>
+            <p id="GTTB" class="alert alert-info"></p>
+        </form>
+    </div>
+
+
+<!-- ĐỔI TIỀN 
+        Khối 1: input
+            - nhập vào số tiền             
+        Khối 2:
+        B1:
+            - khai báo biến và gán giá trị ban đầu
+                usd (số tiền USD)             
+                vnd (số tiền VND)
+        B2:
+            - lấy giá trị nhập từ form                   
+            - lập công thức tính 
+                 doiTien = usd*23500
+            - gán hàm vào sự kiện click
+            - hiển thị kết quả lên UI    
+        Khối 3: output
+            - hiển thị kết quả số tiền quy đổi 
+
+    -->
+
+    <div class="container">
+        <h2>ĐỔI TIỀN</h2>
+        <form>
+            <div class="form-group">
+                <input type="number" class="form-control" id="usd" placeholder="Số tiền">
+            </div>
+            <button type="button" id="btndoiTien" class="btn btn-info">Tính nào</button>
+            <p id="doiTien" class="alert alert-info"></p>
+        </form>
+    </div>
+
+
+
+    <div class="container">
+        <h2>TÍNH DIỆN TÍCH, CHU VI HCN</h2>
+        <form>
+            <div class="form-group">
+                <input type="number" class="form-control" id="chieuDai" placeholder="Chiều dài">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="chieuRong" placeholder="Chiều rộng">
+            </div>
+            <button type="button" id="btnTinhChuVi" class="btn btn-info">Tính nào</button>
+            <p id="chuVi" class="alert alert-info"></p>
+            <button type="button" id="btnTinhDienTich" class="btn btn-info">Tính nào</button>
+            <p id="dienTich" class="alert alert-info"></p>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <h2>DEMO TÍNH ĐTB</h2>
+        <form>
+            <div class="form-group">
+                <input type="number" class="form-control" id="toan" placeholder="Toán">
+            </div>
+            <div class="form-group">
+
+                <input type="number" class="form-control" id="van" placeholder="Văn">
+            </div>
+
+            <button type="button" id="btnTinh" class="btn btn-info">Tính nào</button>
+            <p id="txtDiem" class="alert alert-info"></p>
+        </form>
+    </div>
+
+    <script src="./TestJS.js"></script>
+
+</body>
+
+</html>
